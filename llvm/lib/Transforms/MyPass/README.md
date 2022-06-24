@@ -2,11 +2,11 @@
 
 ## My Pass
 
-1. Create a directory `lib/Transforms/MyPass`
-2. Add `CMakeLists.txt` file `lib/Transforms/MyPass`
-3. Add source file `MyPass.cpp` into `lib/Transforms/MyPass`
+1. Create a directory `llvm-project/llvm/lib/Transforms/MyPass`
+2. Add `CMakeLists.txt` file `llvm-project/llvm/lib/Transforms/MyPass`
+3. Add source file `MyPass.cpp` into `llvm-project/llvm/lib/Transforms/MyPass`
 
-4. Add the following code into `lib/Transforms/CMakeLists.txt`:
+4. Add the following code into `llvm-project/llvm/lib/Transforms/CMakeLists.txt`:
 
 ```cmake
 add_subdirectory(MyPass)
@@ -15,6 +15,10 @@ add_subdirectory(MyPass)
 5. Build
 
 ```bash
+cd /path/to/llvm-project
+mkdir -p build
+cd build
+
 cmake -G Ninja -DLLVM_ENABLE_PROJECTS=clang ../llvm
 
 ninja
