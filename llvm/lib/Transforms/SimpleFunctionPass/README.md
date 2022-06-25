@@ -27,6 +27,7 @@ ninja
 ### Run
 
 ```bash
+mv ../llvm/lib/Transforms/SimpleFunctionPass/Test.c.txt ../llvm/lib/Transforms/SimpleFunctionPass/Test.c
 clang -S -emit-llvm ../llvm/lib/Transforms/SimpleFunctionPass/Test.c -o ../llvm/lib/Transforms/SimpleFunctionPass/Test.ll
 
 ./bin/opt -load-pass-plugin=lib/SimpleFunctionPass.dylib -passes="simple-function-pass" -disable-output ../llvm/lib/Transforms/SimpleFunctionPass/Test.ll
