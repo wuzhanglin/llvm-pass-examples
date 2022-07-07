@@ -1,0 +1,30 @@
+// Test.c
+
+void Foo()
+{
+}
+
+void Bar()
+{
+    Foo();
+}
+
+void Fez()
+{
+    Bar();
+}
+
+int main()
+{
+    Foo();
+    Bar();
+    Fez();
+
+    int i = 0;
+    for (i = 0; i < 5; i++)
+    {
+        Foo();
+    }
+
+    return 0;
+}
