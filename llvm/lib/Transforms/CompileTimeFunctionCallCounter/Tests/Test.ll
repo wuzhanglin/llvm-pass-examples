@@ -33,7 +33,6 @@ entry:
   call void @Bar()
   call void @Fez()
   store i32 0, i32* %i, align 4
-  store i32 0, i32* %i, align 4
   br label %for.cond
 
 for.cond:                                         ; preds = %for.inc, %entry
@@ -49,7 +48,7 @@ for.inc:                                          ; preds = %for.body
   %1 = load i32, i32* %i, align 4
   %inc = add nsw i32 %1, 1
   store i32 %inc, i32* %i, align 4
-  br label %for.cond, !llvm.loop !4
+  br label %for.cond, !llvm.loop !3
 
 for.end:                                          ; preds = %for.cond
   ret i32 0
@@ -57,12 +56,11 @@ for.end:                                          ; preds = %for.cond
 
 attributes #0 = { noinline nounwind optnone ssp uwtable "disable-tail-calls"="false" "frame-pointer"="all" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="penryn" "target-features"="+cx16,+cx8,+fxsr,+mmx,+sahf,+sse,+sse2,+sse3,+sse4.1,+ssse3,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
 
-!llvm.module.flags = !{!0, !1, !2}
-!llvm.ident = !{!3}
+!llvm.module.flags = !{!0, !1}
+!llvm.ident = !{!2}
 
-!0 = !{i32 2, !"SDK Version", [2 x i32] [i32 12, i32 1]}
-!1 = !{i32 1, !"wchar_size", i32 4}
-!2 = !{i32 7, !"PIC Level", i32 2}
-!3 = !{!"clang version 12.0.1 (https://github.com/llvm/llvm-project fed41342a82f5a3a9201819a82bf7a48313e296b)"}
-!4 = distinct !{!4, !5}
-!5 = !{!"llvm.loop.mustprogress"}
+!0 = !{i32 1, !"wchar_size", i32 4}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{!"clang version 12.0.1 (https://github.com/llvm/llvm-project fed41342a82f5a3a9201819a82bf7a48313e296b)"}
+!3 = distinct !{!3, !4}
+!4 = !{!"llvm.loop.mustprogress"}
