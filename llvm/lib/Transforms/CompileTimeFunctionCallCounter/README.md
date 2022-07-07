@@ -43,7 +43,7 @@ Output:
 Commands:
 
 ```bash
-cp ../llvm/lib/Transforms/CompileTimeFunctionCallCounter/Tests/Test.c.txt ../llvm/lib/Transforms/CompileTimeFunctionCallCounter/Tests/Test.c
+mv ../llvm/lib/Transforms/CompileTimeFunctionCallCounter/Tests/Test.c.txt ../llvm/lib/Transforms/CompileTimeFunctionCallCounter/Tests/Test.c
 
 clang -S -emit-llvm ../llvm/lib/Transforms/CompileTimeFunctionCallCounter/Tests/Test.c -o ../llvm/lib/Transforms/CompileTimeFunctionCallCounter/Tests/Test.ll
 
