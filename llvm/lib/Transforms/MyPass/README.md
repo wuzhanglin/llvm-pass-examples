@@ -26,21 +26,15 @@ ninja
 
 6. Run
 
+Commands:
+
 ```bash
-./bin/opt -load-pass-plugin=lib/MyPass.dylib -passes="my-pass" -disable-output test.ll
+./bin/opt -load-pass-plugin=lib/MyPass.dylib -passes="my-pass" -disable-output ../llvm/lib/Transforms/MyPass/Tests/Test.ll
 ```
 
-## Notes
+Outout:
 
-Test code in `test.ll`:
-
-```c
-define i32 @foo() {
-  %a = add i32 2, 3
-  ret i32 %a
-}
-
-define void @bar() {
-  ret void
-}
+```
+MyPass in function: foo
+MyPass in function: bar
 ```
