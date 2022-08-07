@@ -25,3 +25,4 @@ llvm-project/llvm
 4. [LLVM系列第二十一章：写一个简单的Loop Pass](https://blog.csdn.net/Zhanglin_Wu/article/details/125494996)
 5. [LLVM系列第二十二章：写一个简单的编译时函数调用统计器(Pass)](https://blog.csdn.net/Zhanglin_Wu/article/details/125670416)
 6. [LLVM系列第二十三章：写一个简单的运行时函数调用统计器(Pass)](https://blog.csdn.net/Zhanglin_Wu/article/details/125696699)
+7. [LLVM系列第二十九章：写一个简单的常量加法“消除”工具(Pass)](https://blog.csdn.net/Zhanglin_Wu/article/details/126114008)
